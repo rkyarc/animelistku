@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎬 Animelistku
 
-## Getting Started
+Selamat datang di **Animelistku**! Ini adalah proyek pengembangan web pertama saya yang dibangun secara mandiri untuk mempelajari ekosistem web modern. Proyek ini berfokus pada integrasi API, manajemen database, dan penggunaan framework Next.js.
 
-First, run the development server:
+## 🚀 Tentang Proyek
+Aplikasi ini memungkinkan pengguna untuk menjelajahi daftar anime populer, mengelola koleksi pribadi, serta memberikan ulasan/komentar. Melalui proyek ini, saya belajar banyak hal mulai dari cara kerja API publik hingga pengelolaan database menggunakan Prisma ORM.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Fitur Utama
+- **Explore Anime:** Mengambil dan menampilkan data real-time dari API publik (Jikan API/MyAnimeList).
+- **Personal Collection:** Pengguna bisa menyimpan daftar anime favorit ke dalam database.
+- **User Comments:** Fitur untuk berinteraksi dengan memberikan komentar atau ulasan pada setiap anime.
+- **Responsive Design:** Tampilan yang nyaman diakses baik dari desktop maupun perangkat mobile.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Teknologi yang Digunakan
+- **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+- **Database:** MySQL
+- **ORM:** [Prisma](https://www.prisma.io/)
+- **Styling:** Tailwind CSS
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📋 Prasyarat (Prerequisites)
+Pastikan kamu sudah menginstal:
+- [Node.js](https://nodejs.org/)
+- [XAMPP](https://www.apachefriends.org/) (untuk menjalankan MySQL lokal)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ⚙️ Cara Instalasi & Menjalankan
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone repository:**
+   ```bash
+   git clone [https://github.com/rkyarc/animelistku.git](https://github.com/rkyarc/animelistku.git)
+   cd animelistku
