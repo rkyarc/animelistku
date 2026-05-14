@@ -1,5 +1,7 @@
 import prisma from "@/libs/prisma"
 
+export const runtime = "nodejs"
+
 export async function POST(request) {
     const { anime_mal_id, user_email, anime_image, anime_title }  = await request.json()
     const data = { anime_mal_id, user_email, anime_image, anime_title }
