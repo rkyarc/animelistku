@@ -21,7 +21,7 @@ const Page = async ({ params }) => {
     <>
       <div className="pt-4 px-4">
         <h3 className="text-color-primary text-2xl">
-          {anime.data.title} - {anime.data.year}
+          {anime.data?.title} - {anime.data?.year}
         </h3>
         {!collection && user && (
           <CollectionButton
