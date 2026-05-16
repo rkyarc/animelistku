@@ -51,27 +51,30 @@ const Page = async ({ params }) => {
         </div>
       </div>
       <div className="pt-4 px-4 flex sm:flex-nowrap flex-wrap gap-2 text-color-primary">
-        <Image
-          src={anime.data.images.webp.image_url}
-          alt={anime.data.images.jpg.image_url}
-          width={250}
-          height={250}
-          className="w-full rounded object-cover"
-        />
+        <div className="relative w-full sm:w-[250px] h-[350px] shrink-0">
+          <Image
+            src={anime.data.images.webp.image_url}
+            alt={anime.data.title || "Anime Cover"}
+            fill
+            sizes="(max-width: 640px) 100vw, 250px" 
+            className="rounded object-cover"
+            priority
+          />
+        </div>
         <p className="text-justify text-xl">{anime.data.synopsis}</p>
       </div>
       <div className="p-4">
         <h3 className="text-color-primary text-2xl mb-2">Komentar</h3>
-        <CommentBox anime_mal_id={id}/>
-      
-        {user && <CommentInput
-          anime_mal_id={id}
-          user_email={user?.email}
-          username={user?.name}
-          anime_title={anime.data.title}
-        />
-        }
-        
+        <CommentBox anime_mal_id={id} />
+
+        {user && (
+          <CommentInput
+            anime_mal_id={id}
+            user_email={user?.email}
+            username={user?.name}
+            anime_title={anime.data.title}
+          />
+        )}
       </div>
       <div>
         <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
