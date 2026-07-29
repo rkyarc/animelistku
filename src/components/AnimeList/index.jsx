@@ -8,19 +8,21 @@ const AnimeList = ({ api }) => {
         return (
           <Link
             href={`/anime/${anime.mal_id}`}
-            className="cursor-pointer text-color-primary hover:text-color-accent transition-all"
+            className="cursor-pointer text-color-primary hover:text-color-accent transition-all bg-color-secondary rounded-lg shadow-md hover:shadow-xl hover:scale-[102%] overflow-hidden flex flex-col"
             key={index}
           >
             <Image
               src={anime.images.webp.image_url}
-              alt="..."
+              alt={anime.title}
               width={350}
               height={350}
-              className="w-full max-h-64 object-cover"
+              className="w-full h-64 object-cover"
             />
-            <h3 className="font-bold md:text-xl text-md p-4">
-              {anime.title}
-            </h3>
+            <div className="p-4 flex flex-col justify-center items-center h-full">
+              <h3 className="font-bold md:text-xl text-md text-center">
+                {anime.title}
+              </h3>
+            </div>
           </Link>
         );
       })}
