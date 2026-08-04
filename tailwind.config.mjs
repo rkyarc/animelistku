@@ -14,10 +14,10 @@ export default {
     },
     colors: {
       color: {
-        primary: '#eeeeee',
-        accent: '#ffc639',
-        secondary: '#393e46',
-        dark: '#222831'
+        primary: '#f8fafc', // Crisp white (Slate 50) for readable text
+        accent: '#facc15', // Vibrant modern yellow (Yellow 400)
+        secondary: '#1e293b', // Sleek card background (Slate 800)
+        dark: '#0f172a' // Deep, premium background (Slate 900)
       }
     }
   },
