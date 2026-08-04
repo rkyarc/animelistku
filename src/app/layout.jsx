@@ -19,7 +19,9 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning={true}
       >
         <Navbar />
-        {children}
+        <section className="max-w-5xl mx-auto min-h-screen px-4 md:px-0">
+          {children}
+        </section>
       </body>
     </html>
   );
