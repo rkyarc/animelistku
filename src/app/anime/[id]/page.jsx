@@ -12,10 +12,18 @@ const Page = async ({ params }) => {
   const { id } = resolvedParams;
 
   const anime = await getAnimeResponse(`anime/${id}`);
+  
+  if (!anime || !anime.data) {
+    return (
+      <div className="min-h-screen flex justify-center items-center">
+        <h3 className="text-color-primary text-2xl font-bold">Anime tidak ditemukan atau server sedang sibuk (Rate Limit). Silakan refresh atau coba lagi nanti.</h3>
+      </div>
+    );
+  }
   const user = await authUserSession();
-  const collection = await prisma.collection.findFirst({
-    where: { user_email: user?.email, anime_mal_id: id },
-  });
+  const collection = user ? await prisma.collection.findFirst({
+    where: { user_email: user.email, anime_mal_id: id },
+  }) : null;
 
   return (
     <>

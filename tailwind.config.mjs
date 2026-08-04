@@ -5,21 +5,20 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        color: {
+          primary: 'var(--color-primary)',
+          accent: 'var(--color-accent)',
+          secondary: 'var(--color-secondary)',
+          dark: 'var(--color-dark)'
+        }
       },
     },
-    colors: {
-      color: {
-        primary: '#f8fafc', // Crisp white (Slate 50) for readable text
-        accent: '#facc15', // Vibrant modern yellow (Yellow 400)
-        secondary: '#1e293b', // Sleek card background (Slate 800)
-        dark: '#0f172a' // Deep, premium background (Slate 900)
-      }
-    }
   },
   plugins: [],
 };

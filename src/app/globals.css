@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: #0f172a;
+    --color-accent: #35858e;
+    --color-secondary: #ffffff;
+    --color-dark: #f1f5f9;
+  }
+
+  .dark {
+    --color-primary: #f8fafc;
+    --color-accent: #35858e;
+    --color-secondary: #1e293b;
+    --color-dark: #0f172a;
+  }
+}
+
 *, *::before, *::after {
     padding: 0;
     margin: 0;
@@ -25,7 +41,7 @@ img:hover {
     height:100px;
     border-radius:50%;
     background: 
-      radial-gradient(farthest-side,#ffc639 95%,#0000) 50% 1px/24px 24px no-repeat,
+      radial-gradient(farthest-side,#35858e 95%,#0000) 50% 1px/24px 24px no-repeat,
       radial-gradient(farthest-side,#0000 calc(100% - 28px),#E4E4ED 0);
     animation:s9 1s infinite linear;
 }

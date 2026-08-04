@@ -5,9 +5,9 @@ import Link from "next/link";
 import prisma from "@/libs/prisma";
 
 const Page = async () => {
-  const user = await authUserSession;
+  const user = await authUserSession();
   const collection = await prisma.collection.findMany({
-    where: { user_email: user.email },
+    where: { user_email: user?.email },
   });
 
   return (
