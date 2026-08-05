@@ -3,7 +3,7 @@
 import { useState } from "react"
 import YouTube from "react-youtube"
 
-const VideoPlayer = (youtubeId) => {
+const VideoPlayer = ({ youtubeId }) => {
     const [isOpen, setIsOpen] = useState(true)
 
     const handleVideoPlayer = () => {

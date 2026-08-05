@@ -11,3 +11,25 @@ export async function POST(request) {
     if (!createCollection) return Response.json({ status: 500, isCreated: false })
     else return Response.json({ status: 200, isCreated: true })
 }
+
+export async function DELETE(request) {
+    const { id, deleteAll, user_email } = await request.json();
+    
+    try {
+        if (deleteAll && user_email) {
+            const deleteAllCollections = await prisma.collection.deleteMany({
+                where: { user_email: user_email }
+            });
+            return Response.json({ status: 200, isDeleted: true, count: deleteAllCollections.count });
+        } else if (id) {
+            const deleteCollection = await prisma.collection.delete({
+                where: { id: parseInt(id) }
+            });
+            return Response.json({ status: 200, isDeleted: true });
+        } else {
+            return Response.json({ status: 400, isDeleted: false, message: "Invalid request data" });
+        }
+    } catch (error) {
+        return Response.json({ status: 500, isDeleted: false, message: error.message });
+    }
+}

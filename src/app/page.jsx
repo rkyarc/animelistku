@@ -4,8 +4,15 @@ import { getAnimeResponse, getNestedAnimeResponse, reproduce } from "@/libs/api-
 
 const Page = async () => {
   const topAnime = await getAnimeResponse("top/anime", "limit=10")
-  let recommendedAnime = await getNestedAnimeResponse("recommendations/anime", "entry")
-  recommendedAnime = reproduce(recommendedAnime, 10)
+  let recommendedAnimeRaw = await getNestedAnimeResponse("recommendations/anime", "entry")
+  
+  let recommendedAnime;
+  if (recommendedAnimeRaw && recommendedAnimeRaw.length > 0) {
+      recommendedAnime = reproduce(recommendedAnimeRaw, 10)
+  } else {
+      // Fallback ke anime musim ini jika API rekomendasi Jikan sedang down (504 Error)
+      recommendedAnime = await getAnimeResponse("seasons/now", "limit=10");
+  }
 
   return (
     <>
