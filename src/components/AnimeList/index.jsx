@@ -22,8 +22,8 @@ const AnimeList = ({ api }) => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
-            <div className="p-4 flex flex-col flex-grow justify-center">
-              <h3 className="font-bold text-sm md:text-base text-color-primary group-hover:text-color-accent transition-colors duration-300 line-clamp-2 leading-snug text-center">
+            <div className="p-2 md:p-4 flex flex-col flex-grow justify-center">
+              <h3 className="font-bold text-xs sm:text-sm md:text-base text-color-primary group-hover:text-color-accent transition-colors duration-300 line-clamp-3 sm:line-clamp-2 leading-tight md:leading-snug text-center">
                 {anime.title}
               </h3>
             </div>

@@ -10,9 +10,17 @@ const Page = async ({params}) => {
 
   return (
     <>
-      <section>
-      <Header title={`Pencarian untuk ${decodeKeyword}...`} />
-      <AnimeList api={searchAnime}/>
+      <section className="px-4 md:px-0">
+        <Header title={`Pencarian untuk ${decodeKeyword}...`} />
+        {searchAnime?.data?.length > 0 ? (
+          <AnimeList api={searchAnime} />
+        ) : (
+          <div className="flex justify-center items-center h-64">
+            <p className="text-color-primary text-lg md:text-xl font-bold text-center">
+              Maaf, data tidak ditemukan atau API sedang gangguan.
+            </p>
+          </div>
+        )}
       </section>
     </>
   );

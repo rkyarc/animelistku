@@ -54,10 +54,10 @@ const Page = async ({ params }) => {
             />
           </div>
           <div className="flex flex-col gap-2 md:gap-4 mb-2 md:mb-6">
-            <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight drop-shadow-lg">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight drop-shadow-lg">
               {anime.data?.title}
             </h1>
-            <p className="text-gray-700 dark:text-gray-300 text-lg font-semibold tracking-wide">
+            <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg font-semibold tracking-wide">
               {anime.data?.year || "Tahun tidak diketahui"} • {anime.data?.type || "TV"} • {anime.data?.status}
             </p>
             {!collection && user && (
@@ -101,8 +101,8 @@ const Page = async ({ params }) => {
 
         {/* Synopsis */}
         <div className="bg-white dark:bg-slate-800/30 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-slate-800 shadow-sm">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-slate-700 pb-2 inline-block">Sinopsis</h2>
-          <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed text-justify">
+          <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-slate-700 pb-2 inline-block">Sinopsis</h2>
+          <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed text-justify">
             {anime.data.synopsis ? await translateText(anime.data.synopsis) : "Sinopsis belum tersedia."}
           </p>
         </div>
