@@ -78,31 +78,31 @@ const Page = async ({ params }) => {
       <div className="max-w-5xl mx-auto px-4 py-8 flex flex-col gap-8">
         
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
-            <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider mb-1">Peringkat</h3>
-            <p className="text-color-primary text-2xl font-bold">#{anime.data.rank || "-"}</p>
+        <div className="grid grid-cols-4 gap-2 md:gap-4">
+          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-2 md:p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
+            <h3 className="text-gray-500 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wider mb-1 text-center truncate w-full">Peringkat</h3>
+            <p className="text-color-primary text-sm sm:text-base md:text-2xl font-bold">#{anime.data.rank || "-"}</p>
           </div>
-          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
-            <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider mb-1">Skor</h3>
-            <p className="text-color-primary text-2xl font-bold flex items-center gap-1">
+          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-2 md:p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
+            <h3 className="text-gray-500 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wider mb-1 text-center truncate w-full">Skor</h3>
+            <p className="text-color-primary text-sm sm:text-base md:text-2xl font-bold flex items-center gap-1">
               ⭐ {anime.data.score || "N/A"}
             </p>
           </div>
-          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
-            <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider mb-1">Anggota</h3>
-            <p className="text-color-primary text-2xl font-bold">{anime.data.members?.toLocaleString()}</p>
+          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-2 md:p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
+            <h3 className="text-gray-500 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wider mb-1 text-center truncate w-full">Anggota</h3>
+            <p className="text-color-primary text-sm sm:text-base md:text-2xl font-bold truncate max-w-full">{anime.data.members ? (anime.data.members > 1000000 ? (anime.data.members / 1000000).toFixed(1) + 'M' : anime.data.members > 1000 ? (anime.data.members / 1000).toFixed(1) + 'K' : anime.data.members) : "-"}</p>
           </div>
-          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
-            <h3 className="text-gray-500 dark:text-gray-400 text-sm font-medium uppercase tracking-wider mb-1">Episode</h3>
-            <p className="text-color-primary text-2xl font-bold">{anime.data.episodes || "-"}</p>
+          <div className="bg-white dark:bg-slate-800/50 rounded-xl p-2 md:p-4 flex flex-col items-center justify-center border border-gray-200 dark:border-slate-700 shadow-sm hover:border-color-accent dark:hover:border-color-accent transition-colors">
+            <h3 className="text-gray-500 dark:text-gray-400 text-[10px] sm:text-xs md:text-sm font-medium uppercase tracking-wider mb-1 text-center truncate w-full">Episode</h3>
+            <p className="text-color-primary text-sm sm:text-base md:text-2xl font-bold">{(anime.data.episodes === null || anime.data.episodes === 0) ? "?" : anime.data.episodes}</p>
           </div>
         </div>
 
         {/* Synopsis */}
         <div className="bg-white dark:bg-slate-800/30 rounded-2xl p-6 md:p-8 border border-gray-200 dark:border-slate-800 shadow-sm">
           <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-slate-700 pb-2 inline-block">Sinopsis</h2>
-          <p className="text-gray-700 dark:text-gray-300 text-sm md:text-lg leading-relaxed text-justify">
+          <p className="text-gray-700 dark:text-gray-300 text-xs sm:text-sm md:text-lg leading-relaxed text-justify">
             {anime.data.synopsis ? await translateText(anime.data.synopsis) : "Sinopsis belum tersedia."}
           </p>
         </div>
