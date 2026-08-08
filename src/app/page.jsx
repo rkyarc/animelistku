@@ -11,7 +11,8 @@ const Page = async () => {
       recommendedAnime = reproduce(recommendedAnimeRaw, 10)
   } else {
       // Fallback ke anime musim ini jika API rekomendasi Jikan sedang down (504 Error)
-      recommendedAnime = await getAnimeResponse("seasons/now", "limit=10");
+      const fallbackAnime = await getAnimeResponse("seasons/now");
+      recommendedAnime = reproduce(fallbackAnime?.data, 10);
   }
 
   return (
