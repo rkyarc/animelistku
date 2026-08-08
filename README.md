@@ -14,7 +14,7 @@ Aplikasi ini memungkinkan pengguna untuk menjelajahi daftar anime populer, menge
 
 
 ## 📸 Pratinjau (Preview)
-<img width="850" alt="animelistku" src="https://github.com/user-attachments/assets/391dfe7c-a607-4ee0-884f-9fbf29cb0b3c" />
+<img width="1920" height="2734" alt="screencapture-animelistku-vercel-app-2026-08-07-18_58_56" src="https://github.com/user-attachments/assets/c90ff895-1216-4772-83b9-0b2d683b143f" />
 
 
 ## ✨ Fitur Utama
