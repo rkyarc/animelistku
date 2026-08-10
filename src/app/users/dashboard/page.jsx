@@ -39,7 +39,7 @@ const Page = async () => {
           {/* Action Cards Grid */}
           <div className="grid grid-cols-2 gap-4 w-full mt-10">
             <Link
-              href="/users/dasboard/collection"
+              href="/users/dashboard/collection"
               className="flex flex-col items-center justify-center gap-2 md:gap-3 p-4 md:p-6 bg-gray-50 hover:bg-color-accent dark:bg-slate-700/50 dark:hover:bg-color-accent text-gray-700 hover:text-white dark:text-gray-200 dark:hover:text-white rounded-2xl transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 group"
             >
               <div className="p-3 md:p-4 bg-white dark:bg-slate-800 text-color-accent rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
@@ -49,7 +49,7 @@ const Page = async () => {
             </Link>
             
             <Link
-              href="/users/dasboard/comment"
+              href="/users/dashboard/comment"
               className="flex flex-col items-center justify-center gap-2 md:gap-3 p-4 md:p-6 bg-gray-50 hover:bg-color-accent dark:bg-slate-700/50 dark:hover:bg-color-accent text-gray-700 hover:text-white dark:text-gray-200 dark:hover:text-white rounded-2xl transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-1 group"
             >
               <div className="p-3 md:p-4 bg-white dark:bg-slate-800 text-color-accent rounded-full shadow-sm group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
