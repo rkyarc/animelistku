@@ -24,8 +24,8 @@ const Header = ({ title, children }) => {
       </button>
 
       {/* Teks Judul di dalam kotak hijau memanjang */}
-      <div className="w-full p-3 px-5 flex items-center justify-between bg-color-accent text-white rounded-lg shadow-sm gap-4">
-        <h3 className="text-xl md:text-2xl font-bold tracking-wide">{title}</h3>
+      <div className="w-full p-3 px-4 sm:px-5 flex flex-wrap sm:flex-nowrap items-center justify-between bg-color-accent text-white rounded-xl shadow-sm gap-2 sm:gap-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide leading-tight flex-1 min-w-[120px]">{title}</h3>
         {children}
       </div>
     </div>

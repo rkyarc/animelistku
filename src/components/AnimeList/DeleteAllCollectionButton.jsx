@@ -74,13 +74,13 @@ const DeleteAllCollectionButton = ({ user_email }) => {
     <>
       <button
         onClick={() => setShowConfirm(true)}
-        className="flex items-center gap-2 px-4 py-2 rounded-full font-bold transition-all duration-300 bg-white text-red-500 hover:bg-red-500 hover:text-white shadow-sm text-sm md:text-base border border-transparent hover:border-white group"
+        className="flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full font-bold transition-all duration-300 bg-white text-red-500 hover:bg-red-500 hover:text-white shadow-sm text-xs sm:text-sm md:text-base border border-transparent hover:border-white group whitespace-nowrap shrink-0"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:animate-bounce" viewBox="0 0 20 20" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 group-hover:animate-bounce" viewBox="0 0 20 20" fill="currentColor">
           <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
         </svg>
         <span className="hidden sm:inline">Hapus Semua Koleksi</span>
-        <span className="sm:hidden">Hapus Semua</span>
+        <span className="inline sm:hidden">Hapus Semua</span>
       </button>
 
       {/* Modal Popup via Portal */}
