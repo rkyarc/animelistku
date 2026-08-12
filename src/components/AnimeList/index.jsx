@@ -3,6 +3,14 @@ import Link from "next/link";
 import { Star } from "@phosphor-icons/react/dist/ssr";
 
 const AnimeList = ({ api }) => {
+  if (!api || !api.data || api.data.length === 0) {
+    return (
+      <div className="w-full text-center py-10">
+        <p className="text-color-primary text-lg">Data anime tidak ditemukan.</p>
+      </div>
+    );
+  }
+
   return (
     <div className="grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 sm:gap-6 px-4 md:px-0">
       {api.data?.map((anime, index) => {
@@ -14,7 +22,7 @@ const AnimeList = ({ api }) => {
           >
             <div className="relative w-full aspect-[3/4] overflow-hidden bg-gray-800">
               <Image
-                src={anime.images.webp.image_url}
+                src={anime.images.webp.large_image_url || anime.images.webp.image_url}
                 alt={anime.title}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"

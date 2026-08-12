@@ -9,8 +9,17 @@ const gabarito = Gabarito({
 });
 
 export const metadata = {
-  title: "AnimeListKu",
-  description: "Website Anime Indonesia",
+  title: "AnimeListKu - Platform Tracker Anime",
+  description: "Website Anime Indonesia. Temukan, simpan, dan beri ulasan pada anime favoritmu dengan mudah.",
+  keywords: ["anime", "animelist", "anime indonesia", "jikan api"],
+  openGraph: {
+    title: "AnimeListKu",
+    description: "Website Anime Indonesia untuk tracking anime favoritmu.",
+    url: "https://animelistku.vercel.app",
+    siteName: "AnimeListKu",
+    locale: "id_ID",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
